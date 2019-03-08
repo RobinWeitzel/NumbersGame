@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+
+<body>
+    <div id="container">
+        <div style="display: flex;">
+            <div id="target"></div>
+            <div id="clock"></div>
+        </div>
+        <div id="whiteboard"></div>
+        <div id="buttons-container">
+            <div id="start" onclick="startClick()">START</div>
+            <div id="numbers">
+                <div>
+                    <div class="number" onclick="numberClick(this);"></div>
+                    <div class="number" onclick="numberClick(this);"></div>
+                </div>
+                <div>
+                    <div class="number" onclick="numberClick(this);"></div>
+                    <div class="number" onclick="numberClick(this);"></div>
+                </div>
+                <div>
+                    <div class="number" onclick="numberClick(this);"></div>
+                    <div class="number" onclick="numberClick(this);"></div>
+                </div>
+            </div>
+            <div id="operations">
+                <div class="operation" onclick="operationClick('(')">(</div>
+                <div class="operation" onclick="operationClick(')')">)</div>
+                <div class="operation" onclick="operationClick('/')"><i class="fas fa-divide"></i></div>
+                <div class="operation" onclick="operationClick('*')"><i class="fas fa-times"></i></div>
+                <div class="operation" onclick="operationClick('-')"><i class="fas fa-minus"></i></div>
+                <div class="operation" onclick="operationClick('+')"><i class="fas fa-plus"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
