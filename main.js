@@ -143,7 +143,7 @@ function createClock(seconds) {
     }
 
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    const degrees = seconds / 30 * Math.PI;
+    const degrees = seconds / (45 / 2) * Math.PI;
     const x2 = 50 - Math.round(Math.sin(degrees) * 35);
     const y2 = 50 - Math.round(Math.cos(degrees) * 35);
 
@@ -169,7 +169,7 @@ function createClock(seconds) {
 }
 
 function startCountdown() {
-    let counter = 60;
+    let counter = 45;
     let interval = setInterval(h => {
         createClock(counter--);
         if (counter < 0) {
@@ -185,6 +185,10 @@ function endGame() {
     const whiteboardContent = document.getElementById('whiteboard').innerHTML;
     const result = eval(whiteboardContent);
 
+    if(result === undefined) {
+        result = 0;
+    }
+
     document.getElementById('whiteboard').innerHTML = whiteboardContent + "=" + result;
 
     if (result == document.getElementById('target').innerHTML) {
@@ -196,4 +200,4 @@ function endGame() {
     document.getElementById('start').innerHTML = "START";
 }
 
-createClock(60);
+createClock(45);
