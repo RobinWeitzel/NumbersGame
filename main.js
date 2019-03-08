@@ -115,7 +115,7 @@ function numberClick(element) {
 }
 
 function operationClick(operation) {
-    if (state !== "operation" || document.querySelectorAll('.number.active').length === 6) {
+    if (operation != "(" && operation != ")" && (state !== "operation" || document.querySelectorAll('.number.active').length === 6)) {
         return;
     }
     state = "number";
