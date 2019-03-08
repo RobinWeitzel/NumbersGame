@@ -43,7 +43,7 @@
 #buttons-container {
     display: grid;
     grid-template-columns: 80% 20%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 16% 28% 28% 28%;
     grid-template-areas: "clear clear"
         "numbers operations"
         "numbers operations"
@@ -62,7 +62,6 @@
     margin: 1px;
     padding: 5px;
     grid-area: clear;
-    height: 50px;
     cursor: pointer;
 }
 
