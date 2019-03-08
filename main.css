@@ -62,7 +62,7 @@
     margin: 1px;
     padding: 5px;
     grid-area: clear;
-
+    height: 50px;
     cursor: pointer;
 }
 
