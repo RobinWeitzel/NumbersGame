@@ -118,7 +118,7 @@ function operationClick(operation) {
     if (operation != "(" && operation != ")" && (state !== "operation" || document.querySelectorAll('.number.active').length === 6)) {
         return;
     }
-    if(operation != "(" && operation != ")" && (state !== "operation" ) {
+    if(operation != "(" && operation != ")") {
         state = "number";
     }
 
